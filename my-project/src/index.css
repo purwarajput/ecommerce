@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background: #f9d4cc;
+  color: rgba(0,0,0,0.9);
+  overflow-x: hidden;
+}
+.container{width: 95%; margin: auto;}
+
+.link:hover{color: #ec3cce;}
+
+.MuiBadge-badge{background-color: #ec3cce !important;}
+
+nav ul button{text-transform: capitalize !important;}
+
+.sliderHome{overflow: inherit !important;}
+
+
+.sliderHome {
+  --swiper-navigation-color: #000;
+  --swiper-pagination-color: #000;
+}
+
+
+.swiper-button-prev {
+  color: #000; /* Button icon color */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover {
+  background-color: #000;
+  color: #fff;
+}
+
