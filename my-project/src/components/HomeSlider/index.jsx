@@ -1,40 +1,58 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import slider1 from '../../assets/slider1.jpg';
-import slider2 from '../../assets/slider2.jpg';
-// import slider3 from '../../assets/slider3.png';
-import slider4 from '../../assets/slider4.png';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper/modules';
+import slider2 from '../../assets/slider2.jpg';
+import slider3 from '../../assets/slider3.jpg';
+import slider4 from '../../assets/slider4.jpg';
+import slider5 from '../../assets/slider5.jpg';
+
+import { Navigation,Autoplay } from 'swiper/modules';
 
 const HomeSlider = () => {
   return (
-     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-            <img src= {slider1}  alt="Local slide" className="w-full" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <img src= {slider2} alt="Local slide" className="w-full" />
-        </SwiperSlide>
-
-        {/* <SwiperSlide>
-            <img src= {slider3} alt="Local slide" className="w-full" />
-        </SwiperSlide> */}
-        <SwiperSlide>
-            <img src= {slider4} alt="Local slide" className="w-full" />
-        </SwiperSlide>
+    <div className="homeSlider py-4">
+        <div className="container">
+            <Swiper spaceBetween={10}
+            navigation={true} 
+            modules={[Navigation, Autoplay]} 
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+        }}
+            className="sliderHome">
         
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+            <div className="item rounded-[20px] overflow-hidden">
+                <img src={slider2} alt="Local slide" className="w-full"/>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className="item rounded-[20px] overflow-hidden">
+            <img src={slider3} alt="Local slide" className="w-full"/>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className="item rounded-[20px] overflow-hidden">
+            <img src={slider4} alt="Local slide" className="w-full"/>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className="item rounded-[20px] overflow-hidden">
+            <img src={slider5} alt="Local slide" className="w-full"/>
+            </div>
+        </SwiperSlide>
+
       </Swiper>
+     </div>
+    </div>
   );
 };
 
 export default HomeSlider;
+

@@ -124,7 +124,7 @@ const Navigation = () => {
               <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Beauty</Button></Link></li>
               <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Jewellery</Button></Link></li>
               <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Electronics</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Essentials</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Wellness</Button></Link></li>
             </ul>
           </div>
 
