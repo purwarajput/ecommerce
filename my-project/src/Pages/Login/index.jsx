@@ -35,7 +35,7 @@ const Login = () => {
                     <Button className='btn-org btn-lg w-full'>Login</Button>
                 </div>
 
-                <p className='text-center'>Not Registered? <Link className='link text-[14px] font-[600]' to='/register'> Sign Up</Link></p>
+                <p className='text-center'>Not Registered? <Link className='link text-[14px] font-[600] text-primary' to='/register'> Sign Up</Link></p>
 
                 <p className='text-center font-[500]'>Or continue with social account</p>
 
