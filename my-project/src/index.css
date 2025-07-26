@@ -24,6 +24,9 @@ h1, h2, h3, h4, h5, h6{font-weight: 600;}
 
 .btn-org{background: #ec3cce !important; color: #fff !important; font-weight: 500; font-size: 16px; padding: 7px 20px !important;}
 .btn-org:hover{background: #171717 !important;}
+
+.btn-lg{font-size: 18px; padding: 10px 20px !important;}
+
 .link:hover{color: #ec3cce;}
 
 .MuiBadge-badge{background-color: #ec3cce !important;}
@@ -119,5 +122,23 @@ input[type=number]::-webkit-outer-spin-button
  
 .productDetailsModal .MuiDialogContent-root{padding: 0px !important;}
 
+.cartPanel .MuiPaper-root{width: 400px; overflow: hidden;}
+
+#size-menu .MuiButtonBase-root{font-size: 12px !important;}
+
+ .otpBox input{
+    border: 1px solid rgba(0,0,0,0.3) !important;
+    outline: none !important;
+    border-radius: 4px;
+  }
+
+  .otpBox input:focus{
+    border: 1px solid rgba(0,0,0,0.7) !important;
+  }
+
+  .otpPage .container{
+    height: 90vh;
+    display: flex;
+  }
 
 

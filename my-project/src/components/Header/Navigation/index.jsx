@@ -17,7 +17,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="py-2 bg-white border-b">
+      <nav>
         <div className="container mx-auto flex items-center justify-between gap-6">
 
           {/* col_1: Shop By Categories Button */}
@@ -33,10 +33,10 @@ const Navigation = () => {
           <div className="col_2 w-[65%]">
             <ul className="flex items-center gap-4 flex-wrap nav">
               <li className="list-none">
-                <Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Home</Button></Link>
+                <Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Home</Button></Link>
               </li>
               <li className="list-none relative">
-                <Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Fashion</Button></Link>
+                <Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Fashion</Button></Link>
 
                 <div className="submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
                   <ul>
@@ -119,12 +119,12 @@ const Navigation = () => {
                 </div>
               </li>
 
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Footwear</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Groceries</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Beauty</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Jewellery</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Electronics</Button></Link></li>
-              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px]">Wellness</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Footwear</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Groceries</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Beauty</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Jewellery</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Electronics</Button></Link></li>
+              <li className="list-none"><Link to="/"><Button className="link transition !font-[500] !text-[rgba(0,0,0,0.9)] hover:!text-purple-600 text-[14px] !py-4">Wellness</Button></Link></li>
             </ul>
           </div>
 

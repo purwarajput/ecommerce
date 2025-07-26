@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaShippingFast } from "react-icons/fa";
 import { PiKeyReturnBold } from "react-icons/pi";
 import { BsWallet2 } from "react-icons/bs";
@@ -13,8 +13,14 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { TiSocialYoutube } from "react-icons/ti";
 import { IoLogoPinterest } from "react-icons/io";
 import { FaSquareInstagram } from "react-icons/fa6"; 
+import Drawer from '@mui/material/Drawer';
+import CartPanel from '../CartPanel';
+import { MyContext } from '../../App';
+import { IoCloseCircleSharp } from "react-icons/io5";
 
 const Footer = () => {
+
+    const context = useContext(MyContext);
   return (
     <>
     <footer className='py-6 bg-[#fafafa]'>
@@ -23,7 +29,7 @@ const Footer = () => {
                 <div className='col flex items-center justify-center flex-col group w-[15%]'>
                     <FaShippingFast className='text-[40px] transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1' />
                     <h3 className='text-[16px] font-[600] mt-3'>Free Shipping</h3>
-                    <p className='text-[12px] font-[500]'>For all Orders Over ₹199</p>
+                    <p className='text-[12px] font-[500]'>For all Orders Over ₹249</p>
                 </div>
 
                 <div className='col flex items-center justify-center flex-col group w-[15%]'>
@@ -155,6 +161,17 @@ const Footer = () => {
         </div>
     </div>
 </div>
+
+{/* Cart Panel */}
+       <Drawer open={context.openCartPanel} onClose={context.toggleCartPanel(false)} anchor={"right"} className='cartPanel'>
+           <div className='flex items-center justify-between py-3 px-4 gap-3 border-b border-[rgba(0,0,0,0.1)] overflow-hidden'>
+            <h4>Shopping Cart (1) </h4>
+            <IoCloseCircleSharp className='text-[20px] cursor-pointer' onClick={context.toggleCartPanel(false)}/>
+           </div>
+
+           <CartPanel/>
+
+      </Drawer>
 
 </>
 

@@ -6,9 +6,14 @@ import AdsBannerSlider from '../../components/AdsBannerSlider';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import ProductsSlider from '../../components/ProductsSlider';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation } from "swiper/modules";
+import BlogItem from '../../components/BlogItem';
 
 const Home = () => {
 
@@ -20,9 +25,11 @@ const Home = () => {
 
   return (
     <>                                                                                                                               
-    <HomeSlider/>
-    <HomeCatSlider/>
+    {/* 👇 Full width banner wapas */}
+    <HomeSlider />
 
+
+    <HomeCatSlider/>
 
     <section className="bg-white py-8">
       <div className="container">
@@ -34,21 +41,20 @@ const Home = () => {
 
           <div className="rightSec w-[60%]">
              <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="scrollable"
-        scrollButtons="auto"
-        aria-label="scrollable auto tabs example"
-      >
-        <Tab label="Fashion" />
-        <Tab label="Footwear" />
-        <Tab label="Groceries" />
-        <Tab label="Beauty" />
-        <Tab label="Jewellery" />
-        <Tab label="Electronics" />
-        <Tab label="Wellness" />
-      </Tabs>
-
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                aria-label="scrollable auto tabs example"
+              >
+                <Tab label="Fashion" />
+                <Tab label="Footwear" />
+                <Tab label="Groceries" />
+                <Tab label="Beauty" />
+                <Tab label="Jewellery" />
+                <Tab label="Electronics" />
+                <Tab label="Wellness" />
+              </Tabs>
           </div>
         </div>
 
@@ -69,34 +75,68 @@ const Home = () => {
           </div>
 
           <p className="font-bold text-[25px]">Flat ₹249</p>
-          </div>
+        </div>
 
-          <AdsBannerSlider items={4} />
-
-        </div> 
+        <AdsBannerSlider items={4} />
+      </div> 
     </section>
-
 
     <section className="py-5 pt-0 bg-white">
       <div className="container">
-                    <h2 className="text-[20px] font-[600]">Latest Favourites</h2>
+        <h2 className="text-[20px] font-[600]">Latest Favourites</h2>
         <ProductsSlider items={6} />
-
         <AdsBannerSlider items={3} />
       </div>
     </section>
 
     <section className="py-5 pt-0 bg-white">
       <div className="container">
-                    <h2 className="text-[20px] font-[600]">Freshly Snapped</h2>
+        <h2 className="text-[20px] font-[600]">Freshly Snapped</h2>
         <ProductsSlider items={6} />
-
-        <AdsBannerSlider items={3} />
+        <AdsBannerSlider items={3 } />
       </div>
     </section>
 
-    <br/><br/><br/><br/><br/>
+    <section className="py-5 pb-8 pt-0 bg-white blogSection">
+      <div className="container">
+        <h2 className="text-[20px] font-[600] mb-4">Latest on the Blog</h2>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          navigation={true}
+          modules={[Navigation]}
+          className="blogSlider"
+        >
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
 
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
     </>
   )
 }
